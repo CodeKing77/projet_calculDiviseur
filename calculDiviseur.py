@@ -14,7 +14,7 @@ def calculDiviseur():  #Fonction de Calcul des diviseurs de nombre entiers posit
         nombre = int(nombre)
         for i in range(1,nombre+1):
             if nombre % i == 0 :
-                listeDesDiviseurs.append(i)
+                listeDesDiviseurs.append(i) 
                 #listeDesDiviseurs = listeDesDiviseurs + [i]  Cette méthode marche aussi
             else :
                 pass
@@ -77,7 +77,8 @@ labelDuNombre.place(x=140 , y=150)
 
 resultatDiviseur =StringVar()
 labelAffichageResultat = Label(fenetre, textvariable=resultatDiviseur)
-labelAffichageResultat.place(x=250 , y=140, width=500 , height=30)
+labelAffichageResultat.place(x=250 , y=140, width=1300 , height=50)
+
 
 
 #Ajout des boutons 
