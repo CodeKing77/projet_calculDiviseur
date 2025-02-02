@@ -62,13 +62,13 @@ def annulation():
 # Création et Configuration de la fenêtre principale
 fenetre = Tk()
 fenetre.title("Diviseur de Nombres Entiers")
-fenetre.geometry("700x450")
+fenetre.geometry("650x400")
 fenetre.resizable(width=False, height=False)
 fenetre.eval('tk::PlaceWindow . ')
 fenetre.config(background="deepskyblue")
 
 # Charger l'image pour l'icône de la fenêtre
-icon_path = "projet_calculDiviseur/image_calcul.ico"  # Remplacez par le chemin de votre image
+icon_path = "projet_calculDiviseur/divide_png.png"  # Remplacez par le chemin de votre image
 icon_image = Image.open(icon_path)
 icon_photo = ImageTk.PhotoImage(icon_image)
 fenetre.iconphoto(False, icon_photo)
