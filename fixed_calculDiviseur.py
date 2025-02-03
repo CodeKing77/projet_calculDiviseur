@@ -28,7 +28,7 @@ def calculerDiviseurs(nombre, listbox, event, update_interval=0.1):
         # Mettre à jour l'interface utilisateur une dernière fois après le calcul
         fenetre.after(0, afficherDiviseurs, listbox, listeDesDiviseurs)
     else:
-        fenetre.after(0, showerror, "Erreur", "Veuillez Saisir un nombre entier Positif")
+        fenetre.after(0, showerror, "Erreur", "Veuillez Saisir un nombre entier Positif")  
 
     # Signaler la fin du calcul
     event.set()
@@ -121,7 +121,7 @@ barreDefilement.pack(side=RIGHT, fill=Y)
 listbox.pack(side=LEFT, fill=BOTH, expand=True)
 
 # Ajout des boutons avec les styles personnalisés
-boutonCalculer = Button(fenetre, text="Calculer Diviseur", command=calculDiviseur, style="Green.TButton")
+boutonCalculer = Button(fenetre, text="Calculer Diviseur", command=calculDiviseur, style="Green.TButton")  
 boutonCalculer.place_configure(x=280, y=320)
 
 boutonAnnuler = Button(fenetre, text="Annuler", command=annulation, style="Red.TButton")
