@@ -76,7 +76,7 @@ def annulation():
 # Création et Configuration de la fenêtre principale
 fenetre = Tk()
 fenetre.title("Diviseur de Nombres Entiers")
-fenetre.geometry("650x400")
+fenetre.geometry("750x400")
 fenetre.resizable(width=False, height=False)
 fenetre.eval('tk::PlaceWindow . ')
 fenetre.config(background="deepskyblue")
@@ -100,19 +100,19 @@ labelDeSaisie = Label(fenetre, text="Entrer un nombre : ", font="Arial")
 labelDeSaisie.place_configure(x=50, y=50)
 
 zoneDeSaisieNombre = Entry(fenetre, font="Arial")
-zoneDeSaisieNombre.place_configure(x=280, y=42, width=150, height=30)
+zoneDeSaisieNombre.place_configure(x=320, y=49, width=150, height=30)
 zoneDeSaisieNombre.bind("<KeyRelease>", afficherNombre)
 zoneDeSaisieNombre.bind("<Return>", calcul)
 
 labelDesDiviseurs = Label(fenetre, text="Les diviseurs de ", font="Arial")
 labelDesDiviseurs.place_configure(x=50, y=150)
 
-labelDuNombre = Label(fenetre, text="", font="Arial")
-labelDuNombre.place(x=172, y=150)
+labelDuNombre = Label(fenetre, text="ici", font="Arial")
+labelDuNombre.place(x=210, y=150)
 
 # Ajout de la Listbox avec une barre de défilement
 monFrame = Frame(fenetre)
-monFrame.place(x=280, y=140, width=250, height=120)
+monFrame.place(x=320, y=140, width=250, height=120)
 
 barreDefilement = Scrollbar(monFrame, orient=VERTICAL)
 listbox = Listbox(monFrame, yscrollcommand=barreDefilement.set, font="Arial")
@@ -122,10 +122,10 @@ listbox.pack(side=LEFT, fill=BOTH, expand=True)
 
 # Ajout des boutons avec les styles personnalisés
 boutonCalculer = Button(fenetre, text="Calculer Diviseur", command=calculDiviseur, style="Green.TButton")  
-boutonCalculer.place_configure(x=280, y=320)
+boutonCalculer.place_configure(x=320, y=320)
 
 boutonAnnuler = Button(fenetre, text="Annuler", command=annulation, style="Red.TButton")
-boutonAnnuler.place_configure(x=450, y=320)
+boutonAnnuler.place_configure(x=480, y=320)
 
 # Affichage de la fenêtre principale
 fenetre.mainloop()
